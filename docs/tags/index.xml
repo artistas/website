@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Artistas</title>
-    <link>https://artistas.io/tags/</link>
+    <link>http://artistas.io/tags/</link>
     <description>Recent content in Tags on Artistas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Dec 2017 13:57:10 -0200</lastBuildDate>
     
-	<atom:link href="https://artistas.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://artistas.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Algorithms</title>
-      <link>https://artistas.io/tags/algorithms/</link>
+      <link>http://artistas.io/tags/algorithms/</link>
       <pubDate>Thu, 28 Dec 2017 13:57:10 -0200</pubDate>
       
-      <guid>https://artistas.io/tags/algorithms/</guid>
+      <guid>http://artistas.io/tags/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamic Programming</title>
-      <link>https://artistas.io/tags/dynamic-programming/</link>
+      <link>http://artistas.io/tags/dynamic-programming/</link>
       <pubDate>Thu, 28 Dec 2017 13:57:10 -0200</pubDate>
       
-      <guid>https://artistas.io/tags/dynamic-programming/</guid>
+      <guid>http://artistas.io/tags/dynamic-programming/</guid>
       <description></description>
     </item>
     

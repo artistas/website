@@ -1,4 +1,4 @@
-baseURL = "https://artistas.io/"
+baseURL = "http://artistas.io/"
 languageCode = "en-us"
 title = "Artistas"
 theme = "hugo-nuo"
