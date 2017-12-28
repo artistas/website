@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8" />
+
+  
+  <title>Coin Change Problem</title>
+
+  
+  
+
+
+
+
+
+  
+  <meta name="author" content="fernandobandeira" />
+  <meta name="description" content="You went to a restaurant and now you have to pay the bill. After making the payment, you need to receive a \$ 30 change. Knowing that the restaurant has an infinite amount of \$ 1, \$ 2, \$ 5, \$ 10 and \$ 20 notes, how many note combinations can you receive for this change?
+As you can see, there are several possible combinations, for example:
+ 10, 10, 10 20, 10 20, 5, 5 10, 10, 5, 5  First, let&amp;rsquo;s define the variables that will be used in this problem." />
+
+  
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Coin Change Problem" />
+    <meta name="twitter:description" content="You went to a restaurant and now you have to pay the bill. After making the payment, you need to receive a \$ 30 change. Knowing that the restaurant has an infinite amount of \$ 1, \$ 2, \$ 5, \$ 10 and \$ 20 notes, how many note combinations can you receive for this change?
+As you can see, there are several possible combinations, for example:
+ 10, 10, 10 20, 10 20, 5, 5 10, 10, 5, 5  First, let&amp;rsquo;s define the variables that will be used in this problem." />
+    <meta name="twitter:image" content="https://artistas.io/img/avatar.jpg" />
+  
+
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Coin Change Problem" />
+  <meta property="og:description" content="You went to a restaurant and now you have to pay the bill. After making the payment, you need to receive a \$ 30 change. Knowing that the restaurant has an infinite amount of \$ 1, \$ 2, \$ 5, \$ 10 and \$ 20 notes, how many note combinations can you receive for this change?
+As you can see, there are several possible combinations, for example:
+ 10, 10, 10 20, 10 20, 5, 5 10, 10, 5, 5  First, let&amp;rsquo;s define the variables that will be used in this problem." />
+  <meta property="og:url" content="https://artistas.io/post/coin-change-problem/" />
+  <meta property="og:image" content="https://artistas.io/img/avatar.jpg" />
+
+
+
+
+<meta name="generator" content="Hugo 0.31.1" />
+
+
+<link rel="canonical" href="https://artistas.io/post/coin-change-problem/" />
+<link rel="alternative" href="/index.xml" title="Artistas" type="application/atom+xml" />
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+
+
+<meta name="robots" content="index,follow" />
+<meta name="referrer" content="origin-when-cross-origin" />
+
+
+
+
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Artistas" />
+<meta name="msapplication-tooltip" content="Artistas" />
+<meta name='msapplication-navbutton-color' content="#5fbf5e" />
+<meta name="msapplication-TileColor" content="#5fbf5e" />
+<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
+<link rel="icon" href="/img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+<link rel="icon" sizes="192x192" href="/img/touch-icon-android.png" />
+<link rel="apple-touch-icon" href="/img/touch-icon-apple.png" />
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5fbf5e" />
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
+
+<link rel="stylesheet" href="/css/bundle.css" />
+
+
+  
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
+  <![endif]-->
+
+<!--[if lte IE 11]>
+    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+
+<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
+
+
+<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
+
+
+</head>
+  <body>
+    
+    <div class="suspension">
+      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+      
+        
+      
+    </div>
+    
+    
+  <header class="site-header">
+  <img class="avatar" src="/avatar.jpg" alt="Avatar">
+  
+  <h2 class="title">Artistas</h2>
+  
+  <p class="subtitle"></p>
+  <button class="menu-toggle" type="button">
+    <span class="icon icon-menu"></span>
+  </button>
+  <nav class="site-menu collapsed">
+    <h2 class="offscreen">Main Menu</h2>
+    <ul class="menu-list">
+      
+      
+      
+      
+        <li class="menu-item
+            
+            
+            
+              is-active
+            ">
+            <a href="/">Home</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/tags/">Tags</a>
+          </li>
+      
+        <li class="menu-item
+            
+            
+            ">
+            <a href="/links/">Links</a>
+          </li>
+      
+    </ul>
+  </nav>
+  <nav class="social-menu collapsed">
+    <h2 class="offscreen">Social Networks</h2>
+    <ul class="social-list">
+
+      
+
+      
+      <li class="social-item">
+        <a href="//github.com/artistas" title="GitHub"><span class="icon icon-github"></span></a>
+      </li>
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <li class="social-item">
+        <a href="/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
+      </li>
+
+    </ul>
+  </nav>
+</header>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title">Coin Change Problem</h1>
+      <p class="post-meta">@fernandobandeira · Dec 28, 2017 · 2 min read</p>
+    </header>
+    <article class="post-content"><p>You went to a restaurant and now you have to pay the bill.
+After making the payment, you need to receive a \$ 30 change.
+Knowing that the restaurant has an infinite amount of \$ 1,
+\$ 2, \$ 5, \$ 10 and \$ 20 notes,
+how many note combinations can you receive
+for this change?</p>
+
+<p>As you can see, there are several possible combinations, for example:</p>
+
+<ul>
+<li>10, 10, 10</li>
+<li>20, 10</li>
+<li>20, 5, 5</li>
+<li>10, 10, 5, 5</li>
+</ul>
+
+<p>First, let&rsquo;s define the variables that will be used in this problem.</p>
+
+<ul>
+<li><code>c</code>: change. Ex: 30</li>
+<li><code>n</code>: total number of notes. Ex: 5</li>
+<li><code>notes</code>: an array containing the notes. Ex: (1, 2, 5, 10, 20)</li>
+</ul>
+
+<p>We can assume that:</p>
+
+<ul>
+<li>All variables will be storing positive integers, or a list of them.</li>
+<li>Notes can be an unsorted list.</li>
+<li>There can be a note that&rsquo;s bigger than the change value.</li>
+</ul>
+
+<p>As you can probably figure out we&rsquo;ll have to loop over the notes array to find the possible combinations for the given change.</p>
+
+<p>However, after we do that, we&rsquo;ll divide the problem into
+sub-problems. For checking how many change combinations can
+be made using the note \$ 5, for example, we&rsquo;ll have to calculate
+how many possible combinations can be made for the change $ 25.</p>
+
+<p>As you can see this is a recursive problem,
+in which each note will have to calculate the total combinations
+for the resulting value of <code>c - note</code>. The sum of the results
+of this process for all of the notes will give us the answer.</p>
+
+<p>Now for the implementation, there&rsquo;s many possible algorithms for
+this problem, I&rsquo;ll use here an iterative one with a complexity of
+Θ(n*m) for the running time and Θ(n) for the storage usage.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">c, n <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">5</span>
+notes <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>]
+combinations <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span>[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">*</span>c
+<span style="color:#66d9ef">for</span> note <span style="color:#f92672">in</span> notes:
+    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(note, c<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        combinations[j] <span style="color:#f92672">+=</span> combinations[j<span style="color:#f92672">-</span>note]
+<span style="color:#66d9ef">print</span>(combinations[c]) <span style="color:#75715e">#109</span></code></pre></div>
+
+<p>This algorithm creates a list with all of the possible
+combinations from (0&hellip;c), the last entry,
+contains the answer we are looking  for.</p>
+
+<p>If for some reason we&rsquo;d need to re-calculate for a change of \$ 25,
+we can simply return what&rsquo;s stored on the index 25
+of the combinations array, since that already contains
+the result for this number.</p>
+</article>
+    <footer class="post-footer">
+      
+      <ul class="post-tags">
+        
+          <li><a href="/tags/algorithms"><span class="tag">Algorithms</span></a></li>
+        
+          <li><a href="/tags/dynamic-programming"><span class="tag">Dynamic Programming</span></a></li>
+        
+      </ul>
+      
+      <p class="post-copyright">
+        
+      </p>
+    </footer>
+    
+      
+    
+  </section>
+  <footer class="site-footer">
+  <p>© 2017 Artistas</p>
+  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
+  
+</footer>
+
+
+
+<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
+<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+      extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+  // Fix <code> tags after MathJax finishes running. This is a
+  // hack to overcome a shortcoming of Markdown. Discussion at
+  // https://github.com/mojombo/jekyll/issues/199
+  MathJax.Hub.Queue(() => {
+    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
+  });
+</script>
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+  </body>
+</html>
